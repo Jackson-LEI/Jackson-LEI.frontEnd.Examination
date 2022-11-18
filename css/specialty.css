@@ -1,0 +1,48 @@
+header nav ul .move{
+    left: 60%;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1300px;
+    height: 1200px;
+}
+
+.body{
+    position: relative;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding:30px;
+    border:2px solid #437bff;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+}
+
+.body p{
+    text-indent: 2em;
+    line-height: 30px;
+    z-index: 10;
+}
+
+.body .subtitle{
+    font-size: 20px;
+    text-indent: 0;
+    line-height: 50px;
+}
+
+.body span{
+    line-height: 30px; 
+    margin-left: 2em;
+}
+
+.body-bg{
+    position: absolute;
+    top:500px;
+    left:700px;
+    width: 50%;
+    opacity:0.08;
+    z-index: -1;
+}
