@@ -51,4 +51,4 @@ HTML5+CSS3+原生JavaScript
 
 # github.io
 <https://jackson-lei.github.io/>
-由于github.io服务器速度慢，建议从本地启动网站。
+由于github.io服务器速度较慢，建议从本地启动网站。
