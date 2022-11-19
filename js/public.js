@@ -5,6 +5,8 @@ window.addEventListener('load', function () {
 	const message = document.querySelector('.message');
 	const close = document.querySelector('.message .close');
 	const content = document.querySelector('.message b');
+    const span = document.querySelector('header .banner-right span');
+	
 	// 跳转
 	for (var i = 0; i < li.length; i++) {
 		li[i].addEventListener('click', function () {
@@ -65,4 +67,63 @@ window.addEventListener('load', function () {
 		content.innerHTML = '20本计算机2班 金雷 前端技术期末作品 网站中所有内容仅供参考'
 		message.style.backgroundColor = 'rgba(255, 0, 0, 0.6)'
 	}
+
+	function showMessages() {
+        if (message.style.opacity = '0') {
+            message.style.top = '60px';
+            message.style.opacity = '1';
+        }
+    }
+
+	if(localStorage.getItem('name') == null){
+		span.innerHTML = '登录'; 
+	}else{
+		span.innerHTML = localStorage.getItem('name'); 
+	} 	
+
+	span.addEventListener('click', function () {
+        if (this.innerHTML == '登录') {
+            flag = true;
+            const name = prompt('请问你是哪位啊？');
+            showMessages();
+            if (name == null) {
+                content.innerHTML = '登录失败！错误10001:用户取消操作';
+                message.style.backgroundColor = 'rgba(255, 0, 0, 0.6)'
+            } else if (name == '') {
+                content.innerHTML = '登录失败！错误10002:用户名为空' + name;
+                message.style.backgroundColor = 'rgba(255, 0, 0, 0.6)'
+            } else {
+                if (name.length > 4) {
+                    console.log(1)
+                    content.innerHTML = '登录失败！错误10003:用户名过长';
+                    message.style.backgroundColor = 'rgba(255, 0, 0, 0.6)'
+                } else {
+                    var str = ['傻', '妈', '操', 'mother', '你', '爹', '娘', '骚', '艹', '货', 'fuck', '贱', '爸', '逼', '狗'];
+                    for (var i = 0; i < str.length; i++) {
+                        if (name.includes(str[i])) {
+                            content.innerHTML = '登录失败！错误10004:用户名包含敏感词汇';
+                            message.style.backgroundColor = 'rgba(255, 0, 0, 0.6)'
+                            flag = false;
+                        }
+                    }
+                    if (flag) {
+                        content.innerHTML = '欢迎你！' + name;
+                        message.style.backgroundColor = 'rgba(0, 255, 0, 0.6)';
+                        span.innerHTML = name;
+                        localStorage.setItem('name',span.innerHTML);
+                    }
+                }
+            }
+        }else{
+            showMessages();
+            content.innerHTML = '双击可登出';
+            message.style.backgroundColor = 'rgba(0, 0, 255, 0.6)';
+            span.addEventListener('dblclick',function(){
+                content.innerHTML = '已退出'+span.innerHTML;
+                message.style.backgroundColor = 'rgba(0, 0, 255, 0.6)';
+                this.innerHTML = '登录';
+                localStorage.removeItem('name');
+            })
+        }
+    })
 })

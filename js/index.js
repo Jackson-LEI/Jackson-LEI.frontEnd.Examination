@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
     const sec7btn = document.querySelectorAll('#section-7 .button');
     const submit = document.querySelector("#section-8 .text input[type='submit']");
     const email = document.querySelector("#section-8 .text input[type='email']");
-
+    const span = document.querySelector('header .banner-right span');
     //控制下拉框
     for (var i = 0; i < selects.length; i++) {
         selects[i].index = i;
@@ -130,7 +130,7 @@ window.addEventListener('load', function () {
         if (email.value != '') {
             content.innerHTML = '订阅成功!';
             message.style.backgroundColor = 'rgba(0,255,0, 0.6)'
-        }else{
+        } else {
             content.innerHTML = '请输入你的电子邮箱地址!';
             message.style.backgroundColor = 'rgba(255,0,0, 0.6)'
         }
