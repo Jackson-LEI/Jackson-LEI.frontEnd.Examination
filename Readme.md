@@ -48,3 +48,7 @@ HTML5+CSS3+原生JavaScript
 + 为主页实现下拉框功能
 + 阻止部分默认事件
 + 提供视频播放/暂停功能
+
+# github.io
+<https://jackson-lei.github.io/>
+由于github.io服务器速度慢，建议从本地启动网站。
