@@ -1,0 +1,80 @@
+header nav ul .move{
+    left: 75%;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1300px;
+}
+
+.body{
+    position: relative;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding:30px;
+    border:2px solid #437bff;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+}
+
+.body p{
+    text-indent: 2em;
+    line-height: 30px;
+    z-index: 10;
+}
+
+.body span{
+    line-height: 30px; 
+    margin-left: 2em;
+}
+
+.body-bg{
+    position: absolute;
+    bottom:-200px;
+    left:700px;
+    width: 50%;
+    opacity:0.08;
+    z-index: -1;
+}
+
+.body .school{
+    width: 700px;
+    height: 400px;
+    margin-left: 280px;
+}
+
+.body .school-icon{
+    width: 400px;
+    height: 90px;
+    margin:20px 0 20px 450px;
+}
+
+.body .images{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    align-content: center;
+    width: 850px;
+    margin-left:200px;
+}
+
+.body .images img{
+    margin-top: 20px;
+}
+
+.body ul li{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.body ul ol li{
+    margin-left: 20px;
+    font-weight: normal;
+}
+
+h3{
+    margin:20px 0 20px 0;
+}
